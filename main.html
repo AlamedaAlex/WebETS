@@ -83,20 +83,24 @@
             background: #318aac;
             color: #fff !important;
         }
-        
     </style>
     <script>
-        y=0
+        c = document.getElementById("myCanvas");
+        ctx = c.getContext("2d");
+        y = 0
         function inicio() {
-            var c = document.getElementById("myCanvas");
-            var ctx = c.getContext("2d");
-            let texto="Inicio"
+            let texto = "Inicio"
+            ctx.moveTo(55, y);
+            ctx.lineTo(55, y+20);
             ctx.beginPath();
-            ctx.ellipse(65, y+20, 50, 20, 0, 0, 2 * Math.PI);
-            ctx.fillText(texto,55,y+20);
-            y=y+50;
+            ctx.ellipse(65, y + 20, 50, 20, 0, 0, 2 * Math.PI);
+            ctx.fillText(texto, 55, y + 20);
+            y = y + 50;
             ctx.stroke();
         }
+        function nuevo(){
+            ctx.clearRect(0, 0, c.width, c.height);
+        }        
     </script>
 </head>
 
@@ -130,7 +134,7 @@
                         <img src="img/ciclo.png" alt="Inicio" width="35" height="23">
                     </button>
                     Extras
-                    <button type="button" onclick="alert('Inicio')" id="inicio">
+                    <button type="button" onclick=nuevo()>
                         <img src="img/nuevo.png" alt="Inicio" width="35" height="23">
                     </button>
                     <button type="button">
@@ -156,7 +160,7 @@
                 </div>
             </div>
             <div id="aside">
-                <canvas id="myCanvas" >
+                <canvas id="myCanvas" height="1000px">
                 </canvas>
             </div>
         </div>
