@@ -8,7 +8,7 @@
             margin: 0%;
             padding: 0%;
             box-sizing: border-box;
-            border: solid black ;
+            
         }
 
         #principal {
@@ -38,51 +38,95 @@
         #footer {
             height: 22%;
             background: white;
+            overflow-y: scroll;
         }
+
         #section {
-            width: 5%;
+            width: 6%;
             height: 100%;
-            background: white;
+            background: rgb(16, 150, 228);
             float: left;
             border: solid black 1px;
+            overflow-y: scroll;
         }
-        #article {
-            width: 80%;
-            height: 10%;
-            background: white;
-            float: top;
-            margin: 0.5em auto;
-            border: solid white;
-        }
+
         #aside {
-            width: 95%;
+            width: 94%;
             height: 100%;
             background: white;
             float: right;
             border: solid black 1px;
+            overflow-y: scroll;
         }
-         img{
-            border: solid black 1px;
-         }
+
+        #article {
+            width: 80%;
+            height: 10%;
+            float: top;
+            margin: auto;
+            align-items: center;
+            
+        }
     </style>
 </head>
 
 <body>
     <div id="principal">
-        <div id="header">Editor de Diagrama  de flujo</div>
+        <div id="header">Editor de Diagrama de flujo</div>
         <div id="nav">Diagrama 1</div>
         <div id="contenedor">
             <div id="section">
                 Simbolos
                 <div id="article">
-                    <img src="img/inicio.png" alt="Inicio" width="45" height="33">
+                    <button type="button" onclick="alert('Inicio')" id="inicio">
+                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                    </button>
+                    <button type="button">
+                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                    </button>
+                    <button type="button">
+                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                    </button>
+                    <button type="button">
+                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                    </button>
+                    <button type="button">
+                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                    </button>
+                    <button type="button">
+                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                    </button>
+                    <button type="button">
+                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                    </button>
+                    <button type="button">
+                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                    </button>
+                    Extras
+                    <button type="button" onclick="alert('Inicio')" id="inicio">
+                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                    </button>
+                    <button type="button">
+                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                    </button>
+                    <button type="button">
+                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                    </button>
+                    <button type="button">
+                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                    </button>
+                    <button type="button">
+                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                    </button>
+                    <button type="button">
+                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                    </button>
+                    <button type="button">
+                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                    </button>
+                    <button type="button">
+                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
                 </div>
-                <div id="article">2</div>
-                <div id="article">3</div>
-                Extras
-                <div id="article">4</div>
-                <div id="article">5</div>
-                <div id="article">6</div>
             </div>
             <div id="aside"></div>
         </div>
@@ -91,4 +135,5 @@
     </div>
 </body>
 <!--45.5 x 33-->
+
 </html>
