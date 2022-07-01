@@ -83,13 +83,18 @@
             background: #318aac;
             color: #fff !important;
         }
+        
     </style>
     <script>
+        y=0
         function inicio() {
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
+            let texto="Inicio"
             ctx.beginPath();
-            ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+            ctx.ellipse(65, y+20, 50, 20, 0, 0, 2 * Math.PI);
+            ctx.fillText(texto,55,y+20);
+            y=y+50;
             ctx.stroke();
         }
     </script>
@@ -151,7 +156,7 @@
                 </div>
             </div>
             <div id="aside">
-                <canvas id="myCanvas">
+                <canvas id="myCanvas" >
                 </canvas>
             </div>
         </div>
