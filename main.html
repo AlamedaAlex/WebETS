@@ -85,8 +85,12 @@
         }
     </style>
     <script>
-        function inicio(){
-            
+        function inicio() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+            ctx.stroke();
         }
     </script>
 </head>
@@ -99,39 +103,36 @@
             <div id="section">
                 Simbolos
                 <div id="article">
-                    <button type="button" onclick="alert('Inicio')" id="inicio">
+                    <button type="button" onclick=inicio()>
                         <img src="img/inicio.png" alt="Inicio" width="35" height="23">
                     </button>
                     <button type="button">
-                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                        <img src="img/variable.png" alt="Inicio" width="35" height="23">
                     </button>
                     <button type="button">
-                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                        <img src="img/entrada.png" alt="Inicio" width="35" height="23">
                     </button>
                     <button type="button">
-                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                        <img src="img/salida.png" alt="Inicio" width="35" height="23">
                     </button>
                     <button type="button">
-                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                        <img src="img/asignacion.png" alt="Inicio" width="35" height="23">
                     </button>
                     <button type="button">
-                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                        <img src="img/if.png" alt="Inicio" width="35" height="23">
                     </button>
                     <button type="button">
-                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
-                    </button>
-                    <button type="button">
-                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                        <img src="img/ciclo.png" alt="Inicio" width="35" height="23">
                     </button>
                     Extras
                     <button type="button" onclick="alert('Inicio')" id="inicio">
-                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                        <img src="img/nuevo.png" alt="Inicio" width="35" height="23">
                     </button>
                     <button type="button">
-                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                        <img src="img/guardar.png" alt="Inicio" width="35" height="23">
                     </button>
                     <button type="button">
-                        <img src="img/inicio.png" alt="Inicio" width="35" height="23">
+                        <img src="img/abrir.png" alt="Inicio" width="35" height="23">
                     </button>
                     <button type="button">
                         <img src="img/inicio.png" alt="Inicio" width="35" height="23">
@@ -149,7 +150,10 @@
                         <img src="img/inicio.png" alt="Inicio" width="35" height="23">
                 </div>
             </div>
-            <div id="aside"></div>
+            <div id="aside">
+                <canvas id="myCanvas">
+                </canvas>
+            </div>
         </div>
         <div id="nav">Codigo generado</div>
         <div id="footer"></div>
