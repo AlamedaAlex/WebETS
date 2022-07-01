@@ -8,7 +8,7 @@
             margin: 0%;
             padding: 0%;
             box-sizing: border-box;
-            
+
         }
 
         #principal {
@@ -23,12 +23,15 @@
             height: 5%;
             background: #BFBF3F;
             border-radius: 1em;
+            text-align: center;
+            font-weight: bold;
         }
 
         #nav {
             height: 5%;
             background: linear-gradient(to right, #A6E2E2, #3EBBBB);
-            border-radius: 1em;
+            margin-top: 5px;
+            font-weight: bold;
         }
 
         #contenedor {
@@ -44,9 +47,8 @@
         #section {
             width: 6%;
             height: 100%;
-            background: rgb(16, 150, 228);
+            background: #A6E2E2;
             float: left;
-            border: solid black 1px;
             overflow-y: scroll;
         }
 
@@ -65,7 +67,21 @@
             float: top;
             margin: auto;
             align-items: center;
-            
+
+        }
+
+        button {
+            color: #318aac !important;
+            background: rgba(0, 0, 0, 0);
+            border: .5px solid;
+            border-color: #318aac;
+            transition: all 1s ease;
+            position: relative;
+        }
+
+        button:hover {
+            background: #318aac;
+            color: #fff !important;
         }
     </style>
 </head>
