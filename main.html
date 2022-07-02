@@ -83,20 +83,81 @@
             background: #318aac;
             color: #fff !important;
         }
-        
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+        .box {
+            border: 3px solid #666;
+            background-color: #ddd;
+            border-radius: .5em;
+            padding: 10px;
+            cursor: move;
+        }
+
+        .box.over {
+            border: 3px dotted #666;
+        }
     </style>
     <script>
-        y=0
-        function inicio() {
-            var c = document.getElementById("myCanvas");
-            var ctx = c.getContext("2d");
-            let texto="Inicio"
-            ctx.beginPath();
-            ctx.ellipse(65, y+20, 50, 20, 0, 0, 2 * Math.PI);
-            ctx.fillText(texto,55,y+20);
-            y=y+50;
-            ctx.stroke();
-        }
+        document.addEventListener('DOMContentLoaded', (event) => {
+
+            function handleDragStart(e) {
+                this.style.opacity = '0.4';
+                dragSrcEl = this;
+
+                e.dataTransfer.effectAllowed = 'move';
+                e.dataTransfer.setData('text/html', this.innerHTML);
+            }
+
+            function handleDragEnd(e) {
+                this.style.opacity = '1';
+
+                items.forEach(function (item) {
+                    item.classList.remove('over');
+                });
+            }
+
+            function handleDragOver(e) {
+                if (e.preventDefault) {
+                    e.preventDefault();
+                }
+
+                return false;
+            }
+
+            function handleDragEnter(e) {
+                this.classList.add('over');
+            }
+
+            function handleDragLeave(e) {
+                this.classList.remove('over');
+            }
+            function handleDrop(e) {
+                e.stopPropagation();
+
+                if (dragSrcEl !== this) {
+                    dragSrcEl.innerHTML = this.innerHTML;
+                    this.innerHTML = e.dataTransfer.getData('text/html');
+                }
+
+                return false;
+            }
+
+            let items = document.querySelectorAll('.container .box');
+            items.forEach(function (item) {
+                item.addEventListener('dragstart', handleDragStart);
+                item.addEventListener('dragover', handleDragOver);
+                item.addEventListener('dragenter', handleDragEnter);
+                item.addEventListener('dragleave', handleDragLeave);
+                item.addEventListener('dragend', handleDragEnd);
+                item.addEventListener('drop', handleDrop);
+            });
+
+        });
     </script>
 </head>
 
@@ -107,8 +168,8 @@
         <div id="contenedor">
             <div id="section">
                 <center>
-                Simbolos
-                    <div id="article" >
+                    Simbolos
+                    <div id="article">
                         <button type="button" onclick=inicio()>
                             <img src="img/inicio.png" alt="Inicio" width="45" height="33">
                         </button>
@@ -154,17 +215,20 @@
                         </button>
                         <button type="button">
                             <img src="img/inicio.png" alt="Inicio" width="45" height="33">
-                        </div>
-                    </center>
                     </div>
-                    <div id="aside">
-                        <canvas id="myCanvas" height="1000px" width="1000px">
-                        </canvas>
-                    </div>
-                </div>
-                <div id="nav">Codigo generado</div>
-                <div id="footer"></div>
+                </center>
             </div>
+            <div id="aside">
+                <div class="container">
+                    <div draggable="true" class="box">A</div>
+                    <div draggable="true" class="box">B</div>
+                    <div draggable="true" class="box">C</div>
+                </div>
+            </div>
+        </div>
+        <div id="nav">Codigo generado</div>
+        <div id="footer"></div>
+    </div>
 </body>
 <!--45.5 x 33
 https://www.youtube.com/watch?v=LrN3lbxuZLw
