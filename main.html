@@ -171,7 +171,7 @@
                     Simbolos
                     <div id="article">
                         <button type="button" onclick=inicio()>
-                            <img src="img/inicio.png" alt="Inicio" width="45" height="33">
+                            <img draggable="true" src="img/inicio.png" alt="Inicio" width="45" height="33">
                         </button>
                         <button type="button">
                             <img src="img/variable.png" alt="Inicio" width="45" height="33">
@@ -220,9 +220,17 @@
             </div>
             <div id="aside">
                 <div class="container">
-                    <div draggable="true" class="box">A</div>
-                    <div draggable="true" class="box">B</div>
-                    <div draggable="true" class="box">C</div>
+                    <table border="1px">
+                        <tr>
+                            <th draggable="true" class="box">A</th>
+                        </tr>
+                        <tr>
+                            <th draggable="true" class="box">B</th>
+                        </tr>
+                        <tr>
+                            <th draggable="true" class="box">C</th>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
