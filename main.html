@@ -103,8 +103,13 @@
         }
     </style>
     <script>
+        function doClick() {
+            var el = document.getElementById("fileElem");
+            if (el) {
+                el.click();
+            }
+        }
         document.addEventListener('DOMContentLoaded', (event) => {
-
             function handleDragStart(e) {
                 this.style.opacity = '0.4';
                 dragSrcEl = this;
@@ -158,6 +163,7 @@
             });
 
         });
+
     </script>
 </head>
 
@@ -192,13 +198,17 @@
                             <img src="img/ciclo.png" alt="Inicio" width="45" height="33">
                         </button>
                         Extras
-                        <button type="button" onclick="alert('Inicio')" id="inicio">
+                        <form>
+                            <input type="file" id="fileElem" multiple accept=".xml" style="display:none"
+                                onchange="handleFiles(this.files)">
+                        </form>
+                        <button type="button" onclick="doClick()" id="nuevo">
                             <img src="img/nuevo.png" alt="Inicio" width="45" height="33">
                         </button>
-                        <button type="button">
+                        <button type="button" onclick="doClick()" id="guardar">
                             <img src="img/guardar.png" alt="Inicio" width="45" height="33">
                         </button>
-                        <button type="button">
+                        <button type="button" onclick="doClick()" id="abrir">
                             <img src="img/abrir.png" alt="Inicio" width="45" height="33">
                         </button>
                         <button type="button">
