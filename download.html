@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>How to Download files Using JavaScript </title>
+    <script>
+        function readDoc() {
+            const fs = require("fs");
+
+            fs.open("Carga/Diagrama.xml", "r", (err, file) => {
+                if (err) throw err;
+                fs.readFile(file, (err, data) => {
+                    if (err) throw err;
+                    console.log(data.toString());
+                });
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="readDoc()" id="nuevo">LEER</button>
+    <a href="Carga/Diagrama.xml" download>Descarga</a>
+</body>
+
+</html>
