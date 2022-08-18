@@ -201,13 +201,16 @@
                         <form>
                             <input type="file" id="fileElem" multiple accept=".xml" style="display:none"
                                 onchange="handleFiles(this.files)">
+                            
                         </form>
                         <button type="button" onclick="doClick()" id="nuevo">
                             <img src="img/nuevo.png" alt="Inicio" width="45" height="33">
                         </button>
-                        <button type="button" onclick="doClick()" id="guardar">
-                            <img src="img/guardar.png" alt="Inicio" width="45" height="33">
-                        </button>
+                        <a href="Carga/Diagrama.xml" download="Diagrama">
+                            <button type="button"  id="guardar">
+                                <img src="img/guardar.png" alt="Inicio" width="45" height="33">
+                            </button>
+                        </a>
                         <button type="button" onclick="doClick()" id="abrir">
                             <img src="img/abrir.png" alt="Inicio" width="45" height="33">
                         </button>
@@ -245,8 +248,11 @@
                 </div>
             </div>
         </div>
-        <div id="nav">Codigo generado</div>
-        <div id="footer"></div>
+        <div id="nav">Codigo generado
+        </div>
+        <div id="footer">
+        <iframe src="Carga/Codigo/codigo.c" title="codigo"></iframe>
+        </div>
     </div>
 </body>
 <!--45.5 x 33
