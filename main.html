@@ -2,6 +2,13 @@
 <html>
 
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Alexis Alameda Poblano" />
+    <meta name="keywords" content="etiquetas, html, xml, css, javascript" />
+    <meta name="copyright" content="Alexis Alameda Poblano" />
+    <meta name="description" content="Proyecto ETS Tecnologias para la web" />
+    <meta charset="UTF-8">
+    <title>Submenu en forma de acordeon</title>
     <title>Menu</title>
     <style>
         * {
@@ -83,6 +90,15 @@
             background: #318aac;
             color: #fff !important;
         }
+
+        footer {
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            color: white;
+        }
     </style>
     <script>
         y = 0
@@ -91,18 +107,18 @@
             var ctx = c.getContext("2d");
             let texto = "Inicio"
             ctx.beginPath();
-            ctx.moveTo(65,y + 40);
-            ctx.lineTo(65,y + 40);
-            ctx.lineTo(65,y + 55);
-            
-            ctx.moveTo(60,y + 45);
-            ctx.lineTo(60,y + 45);
-            ctx.lineTo(65,y + 55);
-            ctx.lineTo(70,y + 45);
-            ctx.lineTo(60,y + 45);
+            ctx.moveTo(65, y + 40);
+            ctx.lineTo(65, y + 40);
+            ctx.lineTo(65, y + 55);
+
+            ctx.moveTo(60, y + 45);
+            ctx.lineTo(60, y + 45);
+            ctx.lineTo(65, y + 55);
+            ctx.lineTo(70, y + 45);
+            ctx.lineTo(60, y + 45);
             ctx.fill();
-            
-            ctx.moveTo(115,y + 20);
+
+            ctx.moveTo(115, y + 20);
             ctx.ellipse(65, y + 20, 50, 20, 0, 0, 2 * Math.PI);
             ctx.fillText(texto, 55, y + 20);
             y = y + 50;
@@ -113,15 +129,15 @@
             var ctx = c.getContext("2d");
             let texto = "variable"
             ctx.beginPath();
-            ctx.moveTo(65,y + 40);
-            ctx.lineTo(65,y + 40);
-            ctx.lineTo(65,y + 55);
-            
-            ctx.moveTo(60,y + 45);
-            ctx.lineTo(60,y + 45);
-            ctx.lineTo(65,y + 55);
-            ctx.lineTo(70,y + 45);
-            ctx.lineTo(60,y + 45);
+            ctx.moveTo(65, y + 40);
+            ctx.lineTo(65, y + 40);
+            ctx.lineTo(65, y + 55);
+
+            ctx.moveTo(60, y + 45);
+            ctx.lineTo(60, y + 45);
+            ctx.lineTo(65, y + 55);
+            ctx.lineTo(70, y + 45);
+            ctx.lineTo(60, y + 45);
             ctx.fill();
             ctx.strokeRect(20, y + 10, 90, 30);
             ctx.strokeRect(30, y + 10, 70, 30);
@@ -135,28 +151,28 @@
             let texto = "entrada"
             ctx.beginPath();
             //ctx.moveTo(20, 10);
-            ctx.moveTo(65,y + 40);
-            ctx.lineTo(65,y + 40);
-            ctx.lineTo(65,y + 55);
-            
-            ctx.moveTo(60,y + 45);
-            ctx.lineTo(60,y + 45);
-            ctx.lineTo(65,y + 55);
-            ctx.lineTo(70,y + 45);
-            ctx.lineTo(60,y + 45);
+            ctx.moveTo(65, y + 40);
+            ctx.lineTo(65, y + 40);
+            ctx.lineTo(65, y + 55);
+
+            ctx.moveTo(60, y + 45);
+            ctx.lineTo(60, y + 45);
+            ctx.lineTo(65, y + 55);
+            ctx.lineTo(70, y + 45);
+            ctx.lineTo(60, y + 45);
             ctx.fill();
 
-            ctx.moveTo(20,y +  35);
-            ctx.lineTo(20,y + 35);
-            ctx.lineTo(20,y + 10);
+            ctx.moveTo(20, y + 35);
+            ctx.lineTo(20, y + 35);
+            ctx.lineTo(20, y + 10);
 
-            ctx.lineTo(110,y + 10);
-            
-            ctx.lineTo(110,y + 35);
-            
-            ctx.arc(73,y + 35,17,0,Math.PI,true);   
-            ctx.arc(37,y + 35,17,0,Math.PI,false);
-            
+            ctx.lineTo(110, y + 10);
+
+            ctx.lineTo(110, y + 35);
+
+            ctx.arc(73, y + 35, 17, 0, Math.PI, true);
+            ctx.arc(37, y + 35, 17, 0, Math.PI, false);
+
             //ctx.lineTo(20, 35);
             //ctx.lineTo(90, 35);
             ctx.closePath();
@@ -169,26 +185,26 @@
             var ctx = c.getContext("2d");
             let texto = "salida"
             ctx.beginPath();
-            ctx.moveTo(65,y + 40);
-            ctx.lineTo(65,y + 40);
-            ctx.lineTo(65,y + 55);
-            
-            ctx.moveTo(60,y + 45);
-            ctx.lineTo(60,y + 45);
-            ctx.lineTo(65,y + 55);
-            ctx.lineTo(70,y + 45);
-            ctx.lineTo(60,y + 45);
+            ctx.moveTo(65, y + 40);
+            ctx.lineTo(65, y + 40);
+            ctx.lineTo(65, y + 55);
+
+            ctx.moveTo(60, y + 45);
+            ctx.lineTo(60, y + 45);
+            ctx.lineTo(65, y + 55);
+            ctx.lineTo(70, y + 45);
+            ctx.lineTo(60, y + 45);
             ctx.fill();
 
-            ctx.moveTo(35,y +  10);
-            ctx.lineTo(35,y + 10);
-            ctx.lineTo(110,y + 10);
-            ctx.lineTo(110,y + 35);
-            ctx.lineTo(20,y + 35);
-            ctx.lineTo(20,y + 18);
-            ctx.lineTo(35,y + 10);
+            ctx.moveTo(35, y + 10);
+            ctx.lineTo(35, y + 10);
+            ctx.lineTo(110, y + 10);
+            ctx.lineTo(110, y + 35);
+            ctx.lineTo(20, y + 35);
+            ctx.lineTo(20, y + 18);
+            ctx.lineTo(35, y + 10);
 
-            
+
             ctx.fillText(texto, 55, y + 20);
             y = y + 50;
             ctx.stroke();
@@ -198,15 +214,15 @@
             var ctx = c.getContext("2d");
             let texto = "asignacion"
             ctx.beginPath();
-            ctx.moveTo(65,y + 40);
-            ctx.lineTo(65,y + 40);
-            ctx.lineTo(65,y + 55);
-            
-            ctx.moveTo(60,y + 45);
-            ctx.lineTo(60,y + 45);
-            ctx.lineTo(65,y + 55);
-            ctx.lineTo(70,y + 45);
-            ctx.lineTo(60,y + 45);
+            ctx.moveTo(65, y + 40);
+            ctx.lineTo(65, y + 40);
+            ctx.lineTo(65, y + 55);
+
+            ctx.moveTo(60, y + 45);
+            ctx.lineTo(60, y + 45);
+            ctx.lineTo(65, y + 55);
+            ctx.lineTo(70, y + 45);
+            ctx.lineTo(60, y + 45);
             ctx.fill();
             ctx.strokeRect(20, y + 10, 90, 30);
             ctx.fillText(texto, 55, y + 20);
@@ -218,15 +234,15 @@
             var ctx = c.getContext("2d");
             let texto = "if"
             ctx.beginPath();
-            ctx.moveTo(65,y + 40);
-            ctx.lineTo(65,y + 40);
-            ctx.lineTo(65,y + 55);
-            
-            ctx.moveTo(60,y + 45);
-            ctx.lineTo(60,y + 45);
-            ctx.lineTo(65,y + 55);
-            ctx.lineTo(70,y + 45);
-            ctx.lineTo(60,y + 45);
+            ctx.moveTo(65, y + 40);
+            ctx.lineTo(65, y + 40);
+            ctx.lineTo(65, y + 55);
+
+            ctx.moveTo(60, y + 45);
+            ctx.lineTo(60, y + 45);
+            ctx.lineTo(65, y + 55);
+            ctx.lineTo(70, y + 45);
+            ctx.lineTo(60, y + 45);
             ctx.fill();
 
             ctx.ellipse(65, y + 20, 50, 20, 0, 0, 2 * Math.PI);
@@ -239,15 +255,15 @@
             var ctx = c.getContext("2d");
             let texto = "ciclo"
             ctx.beginPath();
-            ctx.moveTo(65,y + 40);
-            ctx.lineTo(65,y + 40);
-            ctx.lineTo(65,y + 55);
-            
-            ctx.moveTo(60,y + 45);
-            ctx.lineTo(60,y + 45);
-            ctx.lineTo(65,y + 55);
-            ctx.lineTo(70,y + 45);
-            ctx.lineTo(60,y + 45);
+            ctx.moveTo(65, y + 40);
+            ctx.lineTo(65, y + 40);
+            ctx.lineTo(65, y + 55);
+
+            ctx.moveTo(60, y + 45);
+            ctx.lineTo(60, y + 45);
+            ctx.lineTo(65, y + 55);
+            ctx.lineTo(70, y + 45);
+            ctx.lineTo(60, y + 45);
             ctx.fill();
 
             ctx.ellipse(65, y + 20, 50, 20, 0, 0, 2 * Math.PI);
@@ -259,7 +275,7 @@
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
             ctx.beginPath();
-            ctx.clearRect(0, 0, 900,900);
+            ctx.clearRect(0, 0, 900, 900);
             y = 0;
         }
         function doClick() {
@@ -346,6 +362,9 @@
             <iframe src="Carga/Codigo/codigo.c" title="codigo"></iframe>
         </div>
     </div>
+    <footer>
+        <p class="text-center">Alameda Poblano Alexis / IPN ESCOM</p>
+    </footer>
 </body>
 <!--45.5 x 33
 https://www.youtube.com/watch?v=LrN3lbxuZLw
