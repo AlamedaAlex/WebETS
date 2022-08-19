@@ -83,80 +83,184 @@
             background: #318aac;
             color: #fff !important;
         }
-        
     </style>
     <script>
-        y=0
+        y = 0
         function inicio() {
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
-            let texto="Inicio"
+            let texto = "Inicio"
             ctx.beginPath();
-            ctx.ellipse(65, y+20, 50, 20, 0, 0, 2 * Math.PI);
-            ctx.fillText(texto,55,y+20);
-            y=y+50;
+            ctx.moveTo(65,y + 40);
+            ctx.lineTo(65,y + 40);
+            ctx.lineTo(65,y + 55);
+            
+            ctx.moveTo(60,y + 45);
+            ctx.lineTo(60,y + 45);
+            ctx.lineTo(65,y + 55);
+            ctx.lineTo(70,y + 45);
+            ctx.lineTo(60,y + 45);
+            ctx.fill();
+            
+            ctx.moveTo(115,y + 20);
+            ctx.ellipse(65, y + 20, 50, 20, 0, 0, 2 * Math.PI);
+            ctx.fillText(texto, 55, y + 20);
+            y = y + 50;
             ctx.stroke();
         }
         function variable() {
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
-            let texto="variable"
+            let texto = "variable"
             ctx.beginPath();
-            ctx.strokeRect(20, y+10, 90, 35);
-            ctx.strokeRect(30, y+10, 70, 35);
-            ctx.fillText(texto,55,y+20);
-            y=y+50;
+            ctx.moveTo(65,y + 40);
+            ctx.lineTo(65,y + 40);
+            ctx.lineTo(65,y + 55);
+            
+            ctx.moveTo(60,y + 45);
+            ctx.lineTo(60,y + 45);
+            ctx.lineTo(65,y + 55);
+            ctx.lineTo(70,y + 45);
+            ctx.lineTo(60,y + 45);
+            ctx.fill();
+            ctx.strokeRect(20, y + 10, 90, 30);
+            ctx.strokeRect(30, y + 10, 70, 30);
+            ctx.fillText(texto, 55, y + 20);
+            y = y + 50;
             ctx.stroke();
         }
         function entrada() {
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
-            let texto="entrada"
+            let texto = "entrada"
             ctx.beginPath();
-            ctx.ellipse(65, y+20, 50, 20, 0, 0, 2 * Math.PI);
-            ctx.fillText(texto,55,y+20);
-            y=y+50;
+            //ctx.moveTo(20, 10);
+            ctx.moveTo(65,y + 40);
+            ctx.lineTo(65,y + 40);
+            ctx.lineTo(65,y + 55);
+            
+            ctx.moveTo(60,y + 45);
+            ctx.lineTo(60,y + 45);
+            ctx.lineTo(65,y + 55);
+            ctx.lineTo(70,y + 45);
+            ctx.lineTo(60,y + 45);
+            ctx.fill();
+
+            ctx.moveTo(20,y +  35);
+            ctx.lineTo(20,y + 35);
+            ctx.lineTo(20,y + 10);
+
+            ctx.lineTo(110,y + 10);
+            
+            ctx.lineTo(110,y + 35);
+            
+            ctx.arc(73,y + 35,17,0,Math.PI,true);   
+            ctx.arc(37,y + 35,17,0,Math.PI,false);
+            
+            //ctx.lineTo(20, 35);
+            //ctx.lineTo(90, 35);
+            ctx.closePath();
+            ctx.fillText(texto, 30, y + 20);
+            y = y + 50;
             ctx.stroke();
         }
         function salida() {
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
-            let texto="salida"
+            let texto = "salida"
             ctx.beginPath();
-            ctx.ellipse(65, y+20, 50, 20, 0, 0, 2 * Math.PI);
-            ctx.fillText(texto,55,y+20);
-            y=y+50;
+            ctx.moveTo(65,y + 40);
+            ctx.lineTo(65,y + 40);
+            ctx.lineTo(65,y + 55);
+            
+            ctx.moveTo(60,y + 45);
+            ctx.lineTo(60,y + 45);
+            ctx.lineTo(65,y + 55);
+            ctx.lineTo(70,y + 45);
+            ctx.lineTo(60,y + 45);
+            ctx.fill();
+
+            ctx.moveTo(35,y +  10);
+            ctx.lineTo(35,y + 10);
+            ctx.lineTo(110,y + 10);
+            ctx.lineTo(110,y + 35);
+            ctx.lineTo(20,y + 35);
+            ctx.lineTo(20,y + 18);
+            ctx.lineTo(35,y + 10);
+
+            
+            ctx.fillText(texto, 55, y + 20);
+            y = y + 50;
             ctx.stroke();
         }
         function asignacion() {
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
-            let texto="asignacion"
+            let texto = "asignacion"
             ctx.beginPath();
-            ctx.strokeRect(20, y+10, 90, 35);
-            ctx.fillText(texto,55,y+20);
-            y=y+50;
+            ctx.moveTo(65,y + 40);
+            ctx.lineTo(65,y + 40);
+            ctx.lineTo(65,y + 55);
+            
+            ctx.moveTo(60,y + 45);
+            ctx.lineTo(60,y + 45);
+            ctx.lineTo(65,y + 55);
+            ctx.lineTo(70,y + 45);
+            ctx.lineTo(60,y + 45);
+            ctx.fill();
+            ctx.strokeRect(20, y + 10, 90, 30);
+            ctx.fillText(texto, 55, y + 20);
+            y = y + 50;
             ctx.stroke();
         }
         function ifa() {
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
-            let texto="if"
+            let texto = "if"
             ctx.beginPath();
-            ctx.ellipse(65, y+20, 50, 20, 0, 0, 2 * Math.PI);
-            ctx.fillText(texto,55,y+20);
-            y=y+50;
+            ctx.moveTo(65,y + 40);
+            ctx.lineTo(65,y + 40);
+            ctx.lineTo(65,y + 55);
+            
+            ctx.moveTo(60,y + 45);
+            ctx.lineTo(60,y + 45);
+            ctx.lineTo(65,y + 55);
+            ctx.lineTo(70,y + 45);
+            ctx.lineTo(60,y + 45);
+            ctx.fill();
+
+            ctx.ellipse(65, y + 20, 50, 20, 0, 0, 2 * Math.PI);
+            ctx.fillText(texto, 55, y + 20);
+            y = y + 50;
             ctx.stroke();
         }
         function ciclo() {
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
-            let texto="ciclo"
+            let texto = "ciclo"
             ctx.beginPath();
-            ctx.ellipse(65, y+20, 50, 20, 0, 0, 2 * Math.PI);
-            ctx.fillText(texto,55,y+20);
-            y=y+50;
+            ctx.moveTo(65,y + 40);
+            ctx.lineTo(65,y + 40);
+            ctx.lineTo(65,y + 55);
+            
+            ctx.moveTo(60,y + 45);
+            ctx.lineTo(60,y + 45);
+            ctx.lineTo(65,y + 55);
+            ctx.lineTo(70,y + 45);
+            ctx.lineTo(60,y + 45);
+            ctx.fill();
+
+            ctx.ellipse(65, y + 20, 50, 20, 0, 0, 2 * Math.PI);
+            ctx.fillText(texto, 55, y + 20);
+            y = y + 50;
             ctx.stroke();
+        }
+        function nuevoH() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.clearRect(0, 0, 900,900)
+            y = 0;
         }
         function doClick() {
             var el = document.getElementById("fileElem");
@@ -174,8 +278,8 @@
         <div id="contenedor">
             <div id="section">
                 <center>
-                Simbolos
-                    <div id="article" >
+                    Simbolos
+                    <div id="article">
                         <button type="button" onclick=inicio()>
                             <img src="img/inicio.png" alt="Inicio" width="45" height="33">
                         </button>
@@ -201,13 +305,13 @@
                         <form>
                             <input type="file" id="fileElem" multiple accept=".xml" style="display:none"
                                 onchange="handleFiles(this.files)">
-                            
+
                         </form>
-                        <button type="button" id="nuevo">
+                        <button type="button" onclick="nuevoH()" id="nuevo">
                             <img src="img/nuevo.png" alt="Inicio" width="45" height="33">
                         </button>
                         <a href="Carga/Diagrama.xml" download="Diagrama">
-                            <button type="button"  id="guardar">
+                            <button type="button" id="guardar">
                                 <img src="img/guardar.png" alt="Inicio" width="45" height="33">
                             </button>
                         </a>
@@ -229,19 +333,19 @@
                         <button type="button">
                             <img src="img/inicio.png" alt="Inicio" width="45" height="33">
                         </button>
-                        </div>
-                    </center>
                     </div>
-                    <div id="aside">
-                        <canvas id="myCanvas" height="1000px" width="1000px">
-                        </canvas>
-                    </div>
-                </div>
-                <div id="nav">Codigo generado</div>
-                <div id="footer">
-                    <iframe src="Carga/Codigo/codigo.c" title="codigo"></iframe>
-                </div>
+                </center>
             </div>
+            <div id="aside">
+                <canvas id="myCanvas" height="1000px" width="1000px">
+                </canvas>
+            </div>
+        </div>
+        <div id="nav">Codigo generado</div>
+        <div id="footer">
+            <iframe src="Carga/Codigo/codigo.c" title="codigo"></iframe>
+        </div>
+    </div>
 </body>
 <!--45.5 x 33
 https://www.youtube.com/watch?v=LrN3lbxuZLw
