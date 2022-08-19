@@ -97,6 +97,66 @@
             y=y+50;
             ctx.stroke();
         }
+        function variable() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            let texto="variable"
+            ctx.beginPath();
+            ctx.ellipse(65, y+20, 50, 20, 0, 0, 2 * Math.PI);
+            ctx.fillText(texto,55,y+20);
+            y=y+50;
+            ctx.stroke();
+        }
+        function entrada() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            let texto="entrada"
+            ctx.beginPath();
+            ctx.ellipse(65, y+20, 50, 20, 0, 0, 2 * Math.PI);
+            ctx.fillText(texto,55,y+20);
+            y=y+50;
+            ctx.stroke();
+        }
+        function salida() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            let texto="salida"
+            ctx.beginPath();
+            ctx.ellipse(65, y+20, 50, 20, 0, 0, 2 * Math.PI);
+            ctx.fillText(texto,55,y+20);
+            y=y+50;
+            ctx.stroke();
+        }
+        function asignacion() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            let texto="asignacion"
+            ctx.beginPath();
+            ctx.ellipse(65, y+20, 50, 20, 0, 0, 2 * Math.PI);
+            ctx.fillText(texto,55,y+20);
+            y=y+50;
+            ctx.stroke();
+        }
+        function ifa() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            let texto="if"
+            ctx.beginPath();
+            ctx.ellipse(65, y+20, 50, 20, 0, 0, 2 * Math.PI);
+            ctx.fillText(texto,55,y+20);
+            y=y+50;
+            ctx.stroke();
+        }
+        function ciclo() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            let texto="ciclo"
+            ctx.beginPath();
+            ctx.ellipse(65, y+20, 50, 20, 0, 0, 2 * Math.PI);
+            ctx.fillText(texto,55,y+20);
+            y=y+50;
+            ctx.stroke();
+        }
         function doClick() {
             var el = document.getElementById("fileElem");
             if (el) {
@@ -118,23 +178,23 @@
                         <button type="button" onclick=inicio()>
                             <img src="img/inicio.png" alt="Inicio" width="45" height="33">
                         </button>
-                        <button type="button">
-                            <img src="img/variable.png" alt="Inicio" width="45" height="33">
+                        <button type="button" onclick=variable()>
+                            <img src="img/variable.png" alt="variable" width="45" height="33">
                         </button>
-                        <button type="button">
-                            <img src="img/entrada.png" alt="Inicio" width="45" height="33">
+                        <button type="button" onclick=entrada()>
+                            <img src="img/entrada.png" alt="entrada" width="45" height="33">
                         </button>
-                        <button type="button">
-                            <img src="img/salida.png" alt="Inicio" width="45" height="33">
+                        <button type="button" onclick=salida()>
+                            <img src="img/salida.png" alt="salida" width="45" height="33">
                         </button>
-                        <button type="button">
-                            <img src="img/asignacion.png" alt="Inicio" width="45" height="33">
+                        <button type="button" onclick=asignacion()>
+                            <img src="img/asignacion.png" alt="asignacion" width="45" height="33">
                         </button>
-                        <button type="button">
-                            <img src="img/if.png" alt="Inicio" width="45" height="33">
+                        <button type="button" onclick=ifa()>
+                            <img src="img/if.png" alt="if" width="45" height="33">
                         </button>
-                        <button type="button">
-                            <img src="img/ciclo.png" alt="Inicio" width="45" height="33">
+                        <button type="button" onclick=ciclo()>
+                            <img src="img/ciclo.png" alt="ciclo" width="45" height="33">
                         </button>
                         Extras
                         <form>
@@ -177,7 +237,9 @@
                     </div>
                 </div>
                 <div id="nav">Codigo generado</div>
-                <div id="footer"></div>
+                <div id="footer">
+                    <iframe src="Carga/Codigo/codigo.c" title="codigo"></iframe>
+                </div>
             </div>
 </body>
 <!--45.5 x 33
